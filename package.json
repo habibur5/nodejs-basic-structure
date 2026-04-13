@@ -1,0 +1,28 @@
+{
+  "type": "module",
+  "imports": {
+    "#config/*": "./src/config/*",
+    "#/*": "./src/*"
+  },
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "index.js",
+
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "cli": "node src/cli/index.js",
+    "migrate": "node src/cli/index.js migrate",
+    "migrate:fresh": "node src/cli/index.js migrate:fresh",
+    "seed": "node src/cli/index.js seed",
+    "rollback": "node src/cli/index.js rollback"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.1",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
